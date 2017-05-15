@@ -1,4 +1,5 @@
 import React, {PropTypes, Component} from 'react';
+import WeatherContainer from '../containers/WeatherContainer'
 
 export default class Home extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ export default class Home extends Component {
       <div>
         <input id="weather-input" type="text" placeholder="Search by zip code" onChange={(e)=>this.zipCode(e)} />
         <button onClick={()=>this.getWeather()}>Get Weather</button>
+        <WeatherContainer />
       </div>
     );
   }

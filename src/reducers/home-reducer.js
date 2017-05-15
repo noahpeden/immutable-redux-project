@@ -1,10 +1,23 @@
 import * as types from '../actions/action-types';
 
-export default (state = [], action) => {
-  switch (action.type) {
-    case types.ADD_PERSON:
-      return [...state, Object.assign({}, action.person)];
+const weatherReducer = (state = [], action) => {
+  switch(action.type){
+    case 'WEATHER':
+    return [...state, {
+      city:action.city,
+      temp:action.temp,
+      currently:action.currently
+    }]
     default:
-      return state;
-  }
+    return state
+   }
 };
+
+export default weatherReducer
+
+
+const weatherReducer = (state = [], action){
+  switch(action.type) {
+    case 'WEATHER'
+  }
+}
